@@ -8,19 +8,22 @@ function timeBlockColor() {
     var currentHour = moment().hour();
     console.log(currentHour)
 
-    $('.row').each(function () {
+    $('.time-block').each(function () {
         var timeBlock = parseInt($(this).attr("id").slice(4));
         console.log(timeBlock)
+
+
         if (timeBlock < currentHour) {
-            $('.time-block').addClass("past");
+            $(this).addClass("past");
 
         } else if (timeBlock === currentHour) {
-            $('.time-block').removeClass("past");
-            $('.time-block').addClass("present");
+            
+            $(this).addClass("present");
 
         } else {
-            $('.time-block').removeClass("past");
-            $('.time-block').addClass("future");   
+
+            $(this).addClass("future");
+            console.log(this)
         }
     })
 };
@@ -29,8 +32,8 @@ function timeBlockColor() {
 
 
 $(".saveBtn").on('click', function () {
-    var value = $(this).siblings('.text').val();
     var key = $(this).parent().attr('id');
+    var value = $(this).siblings('.text').val();
 
     localStorage.setItem(key, value)
 });
