@@ -14,11 +14,11 @@ function timeBlockColor() {
 
 
         if (timeBlock < currentHour) {
-            $(this).removeClass("future");
+            $(this).removeClass("present");
             $(this).addClass("past");
 
         } else if (timeBlock === currentHour) {
-            $(this).removeClass("past");
+            $(this).removeClass("future");
             $(this).addClass("present");
             
 
