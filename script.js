@@ -14,15 +14,18 @@ function timeBlockColor() {
 
 
         if (timeBlock < currentHour) {
+            $(this).removeClass("future");
             $(this).addClass("past");
 
         } else if (timeBlock === currentHour) {
-            
+            $(this).removeClass("past");
             $(this).addClass("present");
+            
 
         } else {
-
+            $(this).removeClass("present");
             $(this).addClass("future");
+
             console.log(this)
         }
     })
@@ -32,10 +35,13 @@ function timeBlockColor() {
 
 
 $(".saveBtn").on('click', function () {
-    var key = $(this).parent().attr('id');
+    
+
     var value = $(this).siblings('.text').val();
+    var key = $(this).siblings().eq(1).attr('id');
 
     localStorage.setItem(key, value)
+    
 });
 
 $("#hour9 .text").val(localStorage.getItem('hour9'));
