@@ -8,4 +8,4 @@ Screenshot
 <img width="1162" alt="Screen Shot 2021-06-22 at 9 47 50 PM" src="https://user-images.githubusercontent.com/53482411/123027539-9a7dd580-d3a3-11eb-9bc0-93e485efe5d4.png">
 
 
-Live link:
+Live link: https://nolan1979.github.io/Work-Day-Scheduler/
