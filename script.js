@@ -33,29 +33,31 @@ function timeBlockColor() {
 
 
 
-
 $(".saveBtn").on('click', function () {
     
-
-    var value = $(this).siblings('.text').val();
     var key = $(this).siblings().eq(1).attr('id');
-
+    var value = $(this).siblings('.text').val();
+    
     localStorage.setItem(key, value)
     
 });
+  
 
-$("#hour9 .text").val(localStorage.getItem('hour9'));
-$("#hour10 .text").val(localStorage.getItem('hour10'));
-$("#hour11 .text").val(localStorage.getItem('hour11'));
-$("#hour12 .text").val(localStorage.getItem('hour12'));
-$("#hour13 .text").val(localStorage.getItem('hour13'));
-$("#hour14 .text").val(localStorage.getItem('hour14'));
-$("#hour15 .text").val(localStorage.getItem('hour15'));
-$("#hour16 .text").val(localStorage.getItem('hour16'));
-$("#hour17 .text").val(localStorage.getItem('hour17'));
+$("#hour9").val(localStorage.getItem('hour9'));
+$("#hour10").val(localStorage.getItem('hour10'));
+$("#hour11").val(localStorage.getItem('hour11'));
+$("#hour12").val(localStorage.getItem('hour12'));
+$("#hour13").val(localStorage.getItem('hour13'));
+$("#hour14").val(localStorage.getItem('hour14'));
+$("#hour15").val(localStorage.getItem('hour15'));
+$("#hour16").val(localStorage.getItem('hour16'));
+$("#hour17").val(localStorage.getItem('hour17'));
 
 
 timeBlockColor();
+
+
+
 
 
 
