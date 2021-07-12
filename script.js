@@ -20,7 +20,7 @@ function timeBlockColor() {
         } else if (timeBlock === currentHour) {
             $(this).removeClass("future");
             $(this).addClass("present");
-            
+
 
         } else {
             $(this).removeClass("past");
@@ -31,17 +31,15 @@ function timeBlockColor() {
     })
 };
 
-
-
 $(".saveBtn").on('click', function () {
-    
+
     var key = $(this).siblings().eq(1).attr('id');
     var value = $(this).siblings('.text').val();
-    
+
     localStorage.setItem(key, value)
-    
+
 });
-  
+
 
 $("#hour9").val(localStorage.getItem('hour9'));
 $("#hour10").val(localStorage.getItem('hour10'));
@@ -55,6 +53,8 @@ $("#hour17").val(localStorage.getItem('hour17'));
 
 
 timeBlockColor();
+
+
 
 
 

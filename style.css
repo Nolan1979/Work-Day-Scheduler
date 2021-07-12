@@ -21,6 +21,7 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+
 .description {
   white-space: pre-wrap;
 }
@@ -67,4 +68,35 @@ textarea {
 .saveBtn i:hover {
   font-size: 30px;
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width:420px) {
+  .body {
+      width: 100vw;
+  }
+  div.row {
+    width: 80vw;
+    height: 15vh;
+    margin-left: 20px;
+  }
+  div.container {
+    align-items: center;
+    margin: 0;
+  }
+
+}
+
+@media screen and (min-width:421px) and (max-width: 767px) {
+  .body {
+      width: 100vw;
+  }
+  div.row {
+    width: 80vw;
+    height: 15vh;
+    margin-left: 20px;
+  }
+  div.container {
+    align-items: center;
+    margin: 0;
+  }
 }
